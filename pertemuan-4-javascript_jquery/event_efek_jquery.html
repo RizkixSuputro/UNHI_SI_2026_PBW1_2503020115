@@ -1,0 +1,81 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery</title>
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <!-- contoh program interaktif -->
+    <button id="btn">Toggle Konten</button>
+    <p id="teks">Ini adalah konten yang bisa disembunyikan</p>
+
+    <!-- contoh efek fade -->
+    <button id="fadeBtn">Fade</button>
+    <p id="teks2">Teks ini akan menghilang</p>
+    <script>
+      $(document).ready(function () {
+        //contoh event click
+        $("#btn").click(function () {
+          alert("Tombol diklik");
+        });
+
+        // contoh event hover
+        $("#box").mouseenter(function () {
+          $(this).css("background", "yellow");
+        });
+
+        $("#box").mouseleave(function () {
+          $(this).css("background", "white");
+        });
+
+        // hide & show
+        $("#sembunyi").click(function () {
+          $("#teks").hide();
+        });
+
+        $("#tampil").click(function () {
+          $("#teks").show();
+        });
+
+        // toggle
+        $("#btn").click(function () {
+          $("#teks").toggle();
+        });
+
+        // fade in
+        $("#teks").fadeIn();
+
+        // fade out
+        $("#teks").fadeOut();
+
+        // fade toggle
+        $("#teks").fadeToggle();
+
+        // slide up
+        $("#teks").slideUp();
+
+        // slide down
+        $("#teks").slideDown();
+
+        // slide toggle
+        $("#teks").slideToggle();
+
+        // contoh program interaktif
+        $(function () {
+          $("#btn").click(function () {
+            $("#teks").slideToggle();
+          });
+        });
+      });
+
+      //   contoh efek fade
+      $(function () {
+        $("#fadeBtn").click(function () {
+          $("#teks2").fadeToggle();
+        });
+      });
+    </script>
+  </body>
+</html>
