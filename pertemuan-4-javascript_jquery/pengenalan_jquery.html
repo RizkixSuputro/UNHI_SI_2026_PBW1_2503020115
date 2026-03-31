@@ -1,0 +1,26 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery</title>
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <h1 id="judul">Judul Lama</h1>
+    <button id="btn">Klik Saya</button>
+    <script>
+      $(document).ready(function () {
+        // selector jquery
+        $("#judul").text("Judul Baru");
+
+        // contoh program sederhana
+        $(document).ready(function () {
+          $("#btn").click(function () {
+            $("#judul").text("Judul Baru dengan jQuery");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
