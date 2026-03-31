@@ -1,0 +1,49 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <h1 id="judul">Judul Lama</h1>
+    <button onclick="ubahJudul()">Ubah Judul</button>
+
+    <!-- manipulasi style -->
+    <p id="teks">Ini teks</p>
+    <button onclick="ubahWarna()">Ubah Warna</button>
+
+    <script>
+      // mengakses elemen html
+      let judul = document.getElementById("judul");
+      let paragraf = document.querySelector("p");
+      let semuaParagraf = document.querySelectorAll("p");
+
+      //   mengubah konten html
+      document.getElementById("judul").innerHTML = "Judul Baru";
+      document.getElementById("judul").textContent = "Teks Baru";
+
+      //   mengubah style
+      document.getElementById("judul").style.color = "red";
+
+      //   menambah element
+      let p = document.createElement("p");
+      p.textContent = "Paragraf baru";
+
+      document.body.appendChild(p);
+
+      //   menghapus element
+      let el = document.getElementById("hapus");
+      el.remove();
+
+      //   contoh sederhana
+      function ubahJudul() {
+        document.getElementById("judul").innerHTML = "Judul Baru";
+      }
+
+      //   manipulasi style
+      function ubahWarna() {
+        document.getElementById("teks").style.color = "blue";
+      }
+    </script>
+  </body>
+</html>
